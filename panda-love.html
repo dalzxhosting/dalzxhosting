@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panda Imut Love Love</title>
+  <style>
+    body {
+      font-family: 'Comic Sans MS', cursive;
+      background-color: #ffe6f0;
+      text-align: center;
+      padding: 50px;
+    }
+
+    .panda {
+      width: 200px;
+      animation: floating 3s ease-in-out infinite;
+    }
+
+    @keyframes floating {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    .question {
+      font-size: 24px;
+      margin-top: 30px;
+      color: #ff4d88;
+    }
+
+    .buttons {
+      margin-top: 20px;
+    }
+
+    .btn {
+      font-size: 20px;
+      padding: 10px 20px;
+      margin: 10px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    .yes {
+      background-color: #ff99c8;
+      color: white;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .no {
+      background-color: #cccccc;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <img src="https://cdn.pixabay.com/photo/2021/10/06/08/29/panda-6684574_1280.png" alt="Panda Imut" class="panda">
+  <div class="question">Kamu sayang aku nggak? 🥺💕</div>
+  <div class="buttons">
+    <button class="btn yes" onclick="growYes()">Iya 💖</button>
+    <button class="btn no" onclick="alert('Yakin nggak sayang? 😢')">Nggak 😔</button>
+  </div>
+
+  <script>
+    let yesButton = document.querySelector('.yes');
+    let size = 20;
+
+    function growYes() {
+      size += 20;
+      yesButton.style.fontSize = size + 'px';
+      if (size >= window.innerWidth) {
+        document.body.innerHTML = '<h1 style="font-size:50px;color:#ff4d88">YEEEAY KAMU SAYANG AKU 💕🥰💘</h1>';
+      }
+    }
+  </script>
+</body>
+</html>
